@@ -91,4 +91,59 @@ default: print("no info")
 
 
 //2. Функції
-print("2. Функції")
+print("\n\n2. Функції\n")
+
+print("\n - функція, що нічого не приймає і не повертає")
+func printWeatherInfo() {
+    
+    let weaterState = 2
+    
+    switch weaterState {
+//  case 0: print("zero")
+//  case 1: print("one")
+    case 2: print("two")
+    default: print("no info")
+    }
+}
+    
+printWeatherInfo()
+printWeatherInfo()
+
+print("\n - функція, що приймає параметр чи параметри і не повертає нічого")
+func printWeatherInfoWith(temp: Int) {
+    
+    switch temp {
+    case 0: print("zero")
+    case 1: print("one")
+    case 2: print("two")
+    default: print("no info")
+    }
+    
+}
+
+printWeatherInfoWith(temp: 2)
+printWeatherInfoWith(temp: 100)
+
+print("\n - функція, що приймає параметр чи параметри і повертає результат")
+func getDescription(for temp: Int) -> String {
+    
+    let prefix = "Weather is - "
+    var result = ""
+    
+    switch temp {
+    case 0:
+        result = prefix + "0"
+    case 1:
+        result = prefix + "1"
+    case 2:
+        result = prefix + "2"
+    default:
+        result = "no info"
+    }
+    
+    return result
+    
+}
+
+let someResult = getDescription(for: -5)
+print("\(someResult)")
