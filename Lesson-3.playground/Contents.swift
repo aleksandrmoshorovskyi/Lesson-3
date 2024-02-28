@@ -147,3 +147,52 @@ func getDescription(for temp: Int) -> String {
 
 let someResult = getDescription(for: -5)
 print("\(someResult)")
+
+
+//3. Перечислення
+print("\n\n3. Перечислення\n")
+
+/*exampeles
+enum TempertureType: String {
+    case kelvin = "K"
+    case fahrenheit = "F"
+    case celsius = "C"
+}
+
+var tempType: TempertureType = .celsius
+
+switch tempType {
+case .kelvin: "K"
+case .fahrenheit: "F"
+case .celsius: "C"
+}
+*/
+
+enum WeatherType {
+    case sun
+    case rain
+    case snow
+}
+
+var weatherType: WeatherType = .sun
+
+func printEmoji(for type: WeatherType) {
+    
+    switch type {
+    case .rain:
+        print("🌧")
+    case .snow:
+        print("❄️")
+    case .sun:
+        print("☀️")
+    }
+    
+}
+
+printEmoji(for: weatherType)
+
+
+//4. Структури і класи
+print("\n\n4. Структури і класи\n")
+
+
