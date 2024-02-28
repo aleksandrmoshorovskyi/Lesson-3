@@ -195,4 +195,103 @@ printEmoji(for: weatherType)
 //4. Структури і класи
 print("\n\n4. Структури і класи\n")
 
+//struct (value type)
+print("\nStruct\n")
 
+struct WeatherInfonStruct {
+    var temp: Double = 0.0
+    var icon: String = ""
+}
+
+//var weatherInfo: WeatherInfonStruct = WeatherInfonStruct()
+var weather = WeatherInfonStruct()
+
+weather.temp = 15
+weather.icon = "🌈"
+
+struct User {
+    var firstName = ""
+    var lastName = ""
+    var email = ""
+    var age: UInt = 0
+    
+    func isAdult() -> Bool {
+        return age > 21
+    }
+}
+
+var user1 = User()
+
+user1.age = 18
+user1.firstName = "John1"
+user1.lastName = "Wick"
+user1.email = "www@www.com"
+
+print(user1)
+print(user1.isAdult())
+
+var user2 = user1
+
+print(user1)
+print(user1.isAdult())
+
+user2.firstName = "John2"
+user2.age = 25
+
+print(user1)
+print(user1.isAdult())
+print(user2)
+print(user2.isAdult())
+print(user1)
+print(user1.isAdult())
+
+
+//class (reference type)
+print("\nClass\n")
+
+class Person {
+    var firstName = ""
+    var lastName = ""
+    var email = ""
+    var age: UInt = 0
+    
+    func isAdult() -> Bool {
+        return age > 21
+    }
+    
+    func printPerson() {
+        print("\(firstName) \(lastName) - \(age)")
+    }
+}
+
+var person1 = Person()
+
+person1.age = 18
+person1.firstName = "John1"
+person1.lastName = "Wick"
+person1.email = "www@www.com"
+
+//print(person1)
+person1.printPerson()
+print(person1.isAdult())
+
+var person2 = person1
+
+//print(person1)
+person1.printPerson()
+print(person1.isAdult())
+
+person2.firstName = "John2"
+person2.age = 25
+
+//print(person1)
+person1.printPerson()
+print(person1.isAdult())
+
+//print(person2)
+person2.printPerson()
+print(person2.isAdult())
+
+//print(person1)
+person1.printPerson()
+print(person1.isAdult())
